@@ -14,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('cadastro');
 });
 
+Route::get('/criar',[ClienteController::class, 'create'])->name('cliente.create');
+Route::post('/criar',[ClienteController::class, 'store'])->name('cliente.store');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
