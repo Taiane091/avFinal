@@ -7,7 +7,7 @@
     <title>Cadastrar clientes</title>
 </head>
 <body>
-    <form action='{{route("cliente.store")}}' metod='POST'>
+    <form action='{{route("cadastrar_cliente")}}'method='POST'>
         @csrf
         <label>Nome</label>
         <input type='text' name='Nome' id='nome'>

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClienteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,9 @@ Route::get('/', function () {
     return view('cadastro');
 });
 
-Route::get('/criar',[ClienteController::class, 'create'])->name('cliente.create');
-Route::post('/criar',[ClienteController::class, 'store'])->name('cliente.store');
+Route::get('/criar',[ClienteController::class, 'create'])->name('cadastrar_cliente');
+Route::post('/criar',[ClienteController::class, 'store'])->name('cadastrar_cliente');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

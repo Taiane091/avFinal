@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cliente extends Model
 {
-   protected $fillable=['Nome', 'Telefone', 'Cidade', 'Produto desejado', 'Tipo de compra'];
+   protected $fillable=['nome', 'telefone', 'cidade', 'produto_desejado', 'tipo_de_compra'];
 }  

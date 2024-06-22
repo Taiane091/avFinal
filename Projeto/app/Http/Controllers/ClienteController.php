@@ -34,10 +34,12 @@ class ClienteController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {//dd($request);
-        dd($request->all());
-        return ($request);
-    } 
+    {//dd($request->all());
+        Cliente::create(['nome'->$request->nome, 'telefone'->$request->telefone, 'cidade'->$request->cidade, 'produto_desejado'->$request->produto_desejado,
+       'tipo_de_compra'->$request->tipo_de_compra
+    ]);
+    
+    return 'Cadastrado com sucesso!';}
 
     /**
      * Display the specified resource.
