@@ -17,7 +17,7 @@ use App\Http\Controllers\ClienteController;
 Route::get('/', function () {
     return view('cadastro');
 });
-
+Route:: get('/ver/{id}', [ClienteController::class, 'show']);
 Route::get('/criar',[ClienteController::class, 'create'])->name('cadastrar_cliente');
 Route::post('/criar',[ClienteController::class, 'store'])->name('cadastrar_cliente');
 
