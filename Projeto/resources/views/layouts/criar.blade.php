@@ -10,15 +10,15 @@
     <form action='{{route("cadastrar_cliente")}}'method='POST'>
         @csrf
         <label>Nome</label>
-        <input type='text' name='Nome' id='nome'>
+        <input type='text' name='nome' id='nome'>
         <label for ="">Telefone</label>
-        <input type="text" name="Telefone" id="telefone">
+        <input type="text" name="telefone" id="telefone">
         <label for ="">Cidade</label>
-        <input type="text" name="Cidade" id="cidade">
+        <input type="text" name="cidade" id="cidade">
         <label for ="">Produto desejado</label>
-        <input type="text" name="produto desejado" id="produto desejado">
+        <input type="text" name="produto_desejado" id="produto_desejado">
         <label for ="">Tipo de compra</label>
-        <input type="text" name="tipo de compra" id="tipo de compra">
+        <input type="text" name="tipo_de_compra" id="tipo_de_compra">
         <button type="submit">Cadastrar</button>
         
 </body>

@@ -35,8 +35,8 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {//dd($request->all());
-        Cliente::create(['nome'->$request->nome, 'telefone'->$request->telefone, 'cidade'->$request->cidade, 'produto_desejado'->$request->produto_desejado,
-       'tipo_de_compra'->$request->tipo_de_compra
+        Cliente::create(['nome'=>$request->nome, 'telefone'=>$request->telefone, 'cidade'=>$request->cidade, 'produto_desejado'=>$request->produto_desejado,
+       'tipo_de_compra'=>$request->tipo_de_compra
     ]);
     
     return 'Cadastrado com sucesso!';}
