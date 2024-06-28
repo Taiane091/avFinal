@@ -18,6 +18,8 @@ Route::get('/', function () {
     return view('cadastro');
 });
 Route:: get('/ver/{id}', [ClienteController::class, 'show']);
+Route:: get('/editar/{id}', [ClienteController::class, 'edit']);
+Route:: post('/editar/{id}', [ClienteController::class, 'update'])->name('alterar_cliente');
 Route::get('/criar',[ClienteController::class, 'create'])->name('cadastrar_cliente');
 Route::post('/criar',[ClienteController::class, 'store'])->name('cadastrar_cliente');
 

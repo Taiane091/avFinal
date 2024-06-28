@@ -59,9 +59,10 @@ class ClienteController extends Controller
      * @param  \App\Models\Cliente  $cliente
      * @return \Illuminate\Http\Response
      */
-    public function edit(Cliente $cliente)
+    public function edit($id)
     {
-        //
+        $cliente= Cliente::findOrFail($id);
+        return view('layouts.edit', ['cliente' =>$cliente]);
     }
 
     /**
