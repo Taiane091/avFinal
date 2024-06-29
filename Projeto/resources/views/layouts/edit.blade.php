@@ -7,11 +7,17 @@
     <title>Editar</title>
 </head>
 <body>
+
+<form action="{{route('alterar_cliente', ['id'=>$cliente->id])}}" method="POST">
+    @csrf
 <label for="">Clientes</label>
-form {{route ('alterar_produto, ['id'=>$cliente->id]')}}
-<input type="text" name="cliente" id="cliente" value="{{$cliente->nome}}">
-<input type="text" name="cliente" id="cliente" value="{{$cliente->telefone}}">
-<input type="text" name="cliente" id="cliente" value="{{$cliente->cidade}}">
-<input type="text" name="cliente" id="cliente" value="{{$cliente->produto_desejado}}">
+<input type="text" name="nome" id="nome" value="{{$cliente->nome}}">
+<input type="text" name="telefone" id="telefone" value="{{$cliente->telefone}}">
+<input type="text" name="cidade" id="cidade" value="{{$cliente->cidade}}">
+<input type="text" name="produto_desejado" id="produto_desejado" value="{{$cliente->produto_desejado}}">
+<button type="submit">Editar</button>
+</form>
+
 </body>
+
 </html>

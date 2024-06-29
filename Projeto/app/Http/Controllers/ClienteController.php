@@ -63,6 +63,7 @@ class ClienteController extends Controller
     {
         $cliente= Cliente::findOrFail($id);
         return view('layouts.edit', ['cliente' =>$cliente]);
+        
     }
 
     /**
@@ -72,11 +73,19 @@ class ClienteController extends Controller
      * @param  \App\Models\Cliente  $cliente
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cliente $cliente)
+    public function update(Request $request, $id)
     {
-        //
-    }
+        $cliente= Cliente::findOrFail($id);
 
+        $cliente::update([
+        'nome'=>$request->input('nome'), 
+        'telefone'=>$request->input('telefone'), 
+        'cidade'=>$request->input('cidade'),
+         'produto_desejado'=>$request->input('produto_desejado'),
+        'tipo_de_compra'=>$request->input('tipo_de_compra')]);
+        return 'Cliente atualizado!';
+    }
+   
     /**
      * Remove the specified resource from storage.
      *
